@@ -1,0 +1,30 @@
+@if (error()) {
+    <app-error-modal title="An error occured!" [message]="error()" />
+}
+
+<header>
+    <img src="logo.png" alt="Stylized globe" />
+    <h1>PlacePicker</h1>
+    <p>
+        Create your personal collection of places you would like to visit or you
+        have visited.
+    </p>
+</header>
+
+<main>
+    <app-available-places />
+
+    <app-user-places />
+</main>
+
+<footer>
+    <span class="author">
+        Made with ❤️ by
+        <a href="https://github.com/isabella-projects" target="_blank"
+            >isabella-projects</a
+        >
+    </span>
+    <span class="copyright"
+        >© {{ currentYear | date: "yyyy" }} — All Rights Reserved
+    </span>
+</footer>
