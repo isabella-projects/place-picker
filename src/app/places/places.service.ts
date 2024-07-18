@@ -20,14 +20,14 @@ export class PlacesService {
     loadAvailablePlaces() {
         return this.fetchPlaces(
             'http://localhost:3000/places',
-            'Something went wrong fetching the available places! Pleas try again later!',
+            'Something went wrong fetching the available places! Please try again later!',
         );
     }
 
     loadUserPlaces() {
         return this.fetchPlaces(
             'http://localhost:3000/user-places',
-            'Something went wrong fetching the favorite places! Pleas try again later!',
+            'Something went wrong fetching the favorite places! Please try again later!',
         ).pipe(
             tap({
                 next: (userPlaces) => this.userPlaces.set(userPlaces),
